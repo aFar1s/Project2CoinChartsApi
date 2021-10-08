@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import Coin from "./Components/Coin";
+import Form from "./Components/Form";
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -29,17 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="coin-search">
-        <h1 className="search-header">Input Coin Name</h1>
-        <form>
-          <input
-            type="text"
-            className="form-coin-input"
-            placeholder="Search"
-            onChange={changeTextField}
-          />
-        </form>
-      </div>
+      <Form changeTextField={changeTextField}/>
       {filteredSearchString.map((coin) => {
         return (
           <Coin
