@@ -1,0 +1,14 @@
+button {
+    margin-bottom: 20px;
+    background-color: aquamarine;
+    color: rgb(130, 125, 125);
+    font-size: xx-large;
+    font-weight: bold;
+    text-decoration: underline;
+    border-radius: 5px;
+
+}
+
+body {
+     background-color: #d1cab5;
+}
