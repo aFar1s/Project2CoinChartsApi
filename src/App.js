@@ -6,6 +6,7 @@ import "./App.css";
 import Coin from "./Components/Coin";
 import Form from "./Components/Form";
 import Home from "./Pages/Home";
+import AboutUs from "./Pages/AboutUs";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from "./Components/Navbar";
 
@@ -41,25 +42,30 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <div className="coin-component-container">
-              <Route exact path="/data">
-              <Form changeTextField={changeTextField} />
-              {filteredSearchString.map((coin) => {
-                return (
-                  <Coin
-                    key={coin.id}
-                    name={coin.name}
-                    image={coin.image}
-                    symbol={coin.symbol}
-                    volume={coin.total_volume}
-                    price={coin.current_price}
-                    priceChange={coin.price_change_percentage_24h}
-                    market_cap={coin.market_cap}
-                  />
-                );
-              })}
-              </Route>
-            </div>
+            <Route exact path="/data">
+              <div className="coin-component-container">
+                <Form changeTextField={changeTextField} />
+                {filteredSearchString.map((coin) => {
+                  return (
+                    <Coin
+                      key={coin.id}
+                      name={coin.name}
+                      image={coin.image}
+                      symbol={coin.symbol}
+                      volume={coin.total_volume}
+                      price={coin.current_price}
+                      priceChange={coin.price_change_percentage_24h}
+                      market_cap={coin.market_cap}
+                    />
+                  );
+                })}
+              </div>
+            </Route>
+            <Route exact path="/about-us">
+              <div className="about-us-container">
+               <AboutUs />
+              </div>
+            </Route>
           </Switch>
         </div>
       </div>
