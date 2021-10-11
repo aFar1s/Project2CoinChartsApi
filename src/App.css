@@ -9,6 +9,15 @@ button {
 
 }
 
-body {
-     background-color: #d1cab5;
+
+
+/* .App {
+    background-color: blue
+
+} */
+
+.content-container {
+    
+    max-width: 500px;
+    margin: auto;
 }

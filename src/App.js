@@ -35,21 +35,23 @@ function App() {
     // <Router> 
       <div className="App">
         <Navbar />
-        <Form changeTextField={changeTextField} />
-        {filteredSearchString.map((coin) => {
-          return (
-            <Coin
-              key={coin.id}
-              name={coin.name}
-              image={coin.image}
-              symbol={coin.symbol}
-              volume={coin.total_volume}
-              price={coin.current_price}
-              priceChange={coin.price_change_percentage_24h}
-              market_cap={coin.market_cap}
-            />
-          );
-        })}
+        <div className="content-container">
+          <Form changeTextField={changeTextField} />
+          {filteredSearchString.map((coin) => {
+            return (
+              <Coin
+                key={coin.id}
+                name={coin.name}
+                image={coin.image}
+                symbol={coin.symbol}
+                volume={coin.total_volume}
+                price={coin.current_price}
+                priceChange={coin.price_change_percentage_24h}
+                market_cap={coin.market_cap}
+              />
+            );
+          })}
+        </div>
       </div>
     // </Router>
   );
