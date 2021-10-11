@@ -5,7 +5,7 @@ import axios from "axios";
 import "./App.css";
 import Coin from "./Components/Coin";
 import Form from "./Components/Form";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from "./Components/Navbar";
 
 function App() {
