@@ -6,7 +6,7 @@ import "./App.css";
 import Coin from "./Components/Coin";
 import Form from "./Components/Form";
 import Home from "./Pages/Home";
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from "./Components/Navbar";
 
 function App() {
@@ -33,28 +33,37 @@ function App() {
 
   return (
     
-    // <Router> 
+    <Router> 
       <div className="App">
         <Navbar />
         <div className="content-container">
-          <Form changeTextField={changeTextField} />
-          {filteredSearchString.map((coin) => {
-            return (
-              <Coin
-                key={coin.id}
-                name={coin.name}
-                image={coin.image}
-                symbol={coin.symbol}
-                volume={coin.total_volume}
-                price={coin.current_price}
-                priceChange={coin.price_change_percentage_24h}
-                market_cap={coin.market_cap}
-              />
-            );
-          })}
+          <Switch>
+            <Route path="/">
+              <Home />
+            </Route>
+            <div className="coin-component-container">
+              <Route exact path="/data">
+              <Form changeTextField={changeTextField} />
+              {filteredSearchString.map((coin) => {
+                return (
+                  <Coin
+                    key={coin.id}
+                    name={coin.name}
+                    image={coin.image}
+                    symbol={coin.symbol}
+                    volume={coin.total_volume}
+                    price={coin.current_price}
+                    priceChange={coin.price_change_percentage_24h}
+                    market_cap={coin.market_cap}
+                  />
+                );
+              })}
+              </Route>
+            </div>
+          </Switch>
         </div>
       </div>
-    // </Router>
+    </Router>
   );
 }
 
