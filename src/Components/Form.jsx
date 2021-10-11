@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Form = ({changeTextField}) => {
+const Form = ({ changeTextField }) => {
     return (
         <div>
             <div className="coin-search">

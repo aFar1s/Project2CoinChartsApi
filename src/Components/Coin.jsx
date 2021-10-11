@@ -7,7 +7,7 @@ const Coin = ({ name, image, symbol, price, volume, priceChange }) => {
                 <div className="coin">
                     <img src={image} alt='coin-logo' />
                     <h1>{name}</h1>
-                    <p className="coin-symbol">{symbol}</p>
+                    <p className="coin-symbol">{symbol.toUpperCase()}</p>
                 </div>
                 <div className="coin-data">
                     <p className="coin-price">SGD {price}</p>
@@ -15,7 +15,7 @@ const Coin = ({ name, image, symbol, price, volume, priceChange }) => {
                     {priceChange < 0 ? (
                         <p className="coin-percent-text red">{priceChange.toFixed(2)}%</p>
                     ) : (
-                        <p className="coin-percent-text green">{priceChange.toFixed(2)}%</p>
+                        <p className="coin-percent-text green">{priceChange.toFixed(2)}%</p> //! apply color change in css
                        )}
                 </div>
             </div>
