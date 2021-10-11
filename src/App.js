@@ -38,7 +38,7 @@ function App() {
         <Navbar />
         <div className="content-container">
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <Home />
             </Route>
             <div className="coin-component-container">
