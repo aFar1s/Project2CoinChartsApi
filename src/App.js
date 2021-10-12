@@ -7,6 +7,7 @@ import Coin from "./Components/Coin";
 import Form from "./Components/Form";
 import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
+import ContactUs from "./Pages/ContactUs"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from "./Components/Navbar";
 
@@ -64,6 +65,11 @@ function App() {
             <Route exact path="/about-us">
               <div className="about-us-container">
                <AboutUs />
+              </div>
+            </Route>
+            <Route exact path="/contact-us">
+              <div className="contact-us-container">
+               <ContactUs />
               </div>
             </Route>
           </Switch>

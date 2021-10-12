@@ -117,11 +117,18 @@ const Navbar = () => {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Home', 'Data', 'About', 'Contact Us'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemText primary={text} />
+            <ListItem button key='Home' component={Link} to='/'>
+              <ListItemText primary='Home' />
             </ListItem>
-          ))}
+            <ListItem button key='Data' component={Link} to='/data'>
+                <ListItemText primary='Data' />
+            </ListItem>
+            <ListItem button key='About Us' component={Link} to='/about-us'>
+                <ListItemText primary='About Us' />
+            </ListItem>
+            <ListItem button key='Data'component={Link} to='/contact-us'>
+                <ListItemText primary='Contact Us' />
+            </ListItem>
         </List>
         <Divider />
       </Drawer>
@@ -163,3 +170,14 @@ const Navbar = () => {
 
 
 export default Navbar
+
+
+
+
+/*
+{['Home', 'Data', 'About', 'Contact Us'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+*/
