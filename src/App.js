@@ -32,7 +32,7 @@ function App() {
   const filteredSearchString = coins.filter((coin) =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
-
+console.log(coins)
   return (
     
     <Router> 
